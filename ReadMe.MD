@@ -2,12 +2,17 @@
 
 A script to use Sports2D for bulk processing. See BodyMetaInfo for weight and mass for IK scaling.
 
+# ToDo
+- Timeseries should be seperated out into csv's
+- Maybe visualizing forced vectors on video
+- etc
+
 ## Installation Guide
 
 ### Prerequisites
 - Python 3.10
-- CUDA-compatible GPU (recommended)
-- Conda package manager
+- CUDA-compatible GPU, CUDA toolkit 11.8 is used here
+- Conda
 
 ### Setup Environment
 
@@ -51,7 +56,12 @@ A script to use Sports2D for bulk processing. See BodyMetaInfo for weight and ma
 
 ## Usage
 
-Run the tracking script to start analyzing sports movements:
+Run the tracking script to do tracking and joint angles:
+```bash
+python track_sports2D.py --do_ik --use_detailed_model --mode performance --use_gpu
+```
+
+For simple version without ik scaling and cpu
 ```bash
 python track_sports2d.py
 ```
